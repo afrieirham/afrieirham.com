@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
+
 import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail } from 'react-feather'
 
@@ -26,7 +28,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Afrie Irham</title>
         <link rel='icon' href='/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
@@ -75,7 +76,8 @@ export default function Home() {
           </Text>
 
           <Text mb={2} color='gray.600'>
-            Say hi to me.
+            Say hi to me – or{' '}
+            <LinkText href='https://www.buymeacoffee.com/afrieirham'>buy me a coffee</LinkText>.
           </Text>
           <Stack direction='row' spacing='4'>
             <LinkIcon name={Mail} href='mailto:afrieirham@outlook.com' />
