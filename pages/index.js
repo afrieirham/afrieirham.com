@@ -1,15 +1,6 @@
 import Head from 'next/head'
-import {
-  Flex,
-  Heading,
-  Image,
-  Text,
-  Link,
-  Box,
-  Stack,
-  useBreakpointValue,
-  Icon,
-} from '@chakra-ui/react'
+import Image from 'next/image'
+import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail } from 'react-feather'
 
 function LinkIcon({ name, href }) {
@@ -29,7 +20,9 @@ function LinkText({ children, href }) {
 }
 
 export default function Home() {
-  const heading = useBreakpointValue({ base: 'xl', sm: 'xl' })
+  const heading = useBreakpointValue({ base: 'xl' })
+  const size = useBreakpointValue({ base: 125, md: 200 }) || 125
+
   return (
     <>
       <Head>
@@ -45,13 +38,18 @@ export default function Home() {
 
       <Flex
         minHeight='100vh'
-        justifyContent={{ base: 'start', sm: 'center' }}
-        alignItems={{ base: 'start', sm: 'center' }}
-        direction={{ base: 'column', sm: 'row' }}
-        paddingX={{ base: 4, sm: 0 }}
+        justifyContent={{ base: 'start', md: 'center' }}
+        alignItems={{ base: 'start', md: 'center' }}
+        direction={{ base: 'column', md: 'row' }}
+        paddingX={{ base: 4, md: 0 }}
       >
-        <Box mr={{ base: 0, sm: 16 }} mb={{ base: 8, sm: 0 }} pt={{ base: 16, sm: 0 }}>
-          <Image src='/portrait.png' height={{ base: '125', sm: '200' }} />
+        <Box
+          ml={{ base: 0, md: 4 }}
+          mr={{ base: 0, md: 16 }}
+          mb={{ base: 8, md: 0 }}
+          pt={{ base: 16, md: 0 }}
+        >
+          <Image src='/portrait.png' height={size} width={size} />
         </Box>
         <Flex maxWidth='550px' direction='column'>
           <Text color='gray.500' textTransform='uppercase' fontSize={{ base: 'xs', sm: 'sm' }}>
