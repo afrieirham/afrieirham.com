@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { NextSeo } from 'next-seo'
 
 import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail } from 'react-feather'
@@ -25,9 +24,21 @@ export default function Home() {
   const heading = useBreakpointValue({ base: 'xl' })
   const size = useBreakpointValue({ base: 125, md: 200 }) || 125
 
+  const meta = {
+    title: 'Afrie Irham',
+    description: 'Software developer who loves to create and build stuff.',
+    image: 'https://afrieirham.com/og.png',
+    type: 'website',
+    twitter: {
+      handle: '@afrieirham_',
+      cardType: 'summary_large_image',
+    },
+  }
+
   return (
     <>
       <Head>
+        <title>{meta.title}</title>
         <link rel='icon' href='/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
@@ -35,6 +46,20 @@ export default function Home() {
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
           rel='stylesheet'
         ></link>
+        <meta name='robots' content='follow, index' />
+        <meta name='description' content={meta.description} />
+        <meta property='og:url' content='https://afrieirham.com' />
+        <link rel='canonical' href='https://afrieirham.com' />
+        <meta property='og:type' content={meta.type} />
+        <meta property='og:site_name' content={meta.title} />
+        <meta property='og:description' content={meta.description} />
+        <meta property='og:title' content={meta.title} />
+        <meta property='og:image' content={meta.image} />
+        <meta name='twitter:card' content={meta.twitter.cardType} />
+        <meta name='twitter:site' content={meta.twitter.handle} />
+        <meta name='twitter:title' content={meta.title} />
+        <meta name='twitter:description' content={meta.description} />
+        <meta name='twitter:image' content={meta.image} />
       </Head>
 
       <Flex
