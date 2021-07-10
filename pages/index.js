@@ -102,7 +102,7 @@ export default function Home() {
 
           <Text mb={2} color='gray.600'>
             Say hi to me – or{' '}
-            <LinkText href='https://www.buymeacoffee.com/afrieirham'>buy me a coffee</LinkText>.
+            <LinkText href='https://ko-fi.com/afrieirham'>buy me a coffee</LinkText>.
           </Text>
           <Stack direction='row' spacing='4'>
             <LinkIcon name={Mail} href='mailto:afrieirham@outlook.com' />
