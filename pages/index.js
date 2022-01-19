@@ -66,27 +66,36 @@ export default function Home({ articles }) {
       </Head>
 
       <Flex
-        justifyContent={{ base: 'start', md: 'center' }}
-        alignItems={{ base: 'start', md: 'center' }}
-        direction={{ base: 'column', md: 'row' }}
-        paddingX={{ base: 4, md: 0 }}
-        mt={{ base: 8, md: 16 }}
+        alignItems='center'
         mx='auto'
-        w='2xl'
+        w={{ base: 'full', md: '2xl' }}
+        mt={{ base: 8, md: 16 }}
+        paddingX={{ base: 4, md: 0 }}
+        direction={{ base: 'column', md: 'row' }}
+        justifyContent={{ base: 'start', md: 'center' }}
       >
         <Box
           ml={{ base: 0, md: 4 }}
           mr={{ base: 0, md: 16 }}
-          mb={{ base: 8, md: 0 }}
-          pt={{ base: 16, md: 0 }}
+          mb={{ base: 2, md: 0 }}
+          pt='{{ base: 0, md: 0 }}'
         >
           <Image src='/portrait.png' height={size} width={size} />
         </Box>
-        <Flex maxWidth='550px' direction='column'>
-          <Heading size={heading} fontWeight='extrabold' mb={{ base: 4 }} letterSpacing='tight'>
+        <Flex maxWidth='550px' direction='column' alignItems={{ base: 'center', md: 'flex-start' }}>
+          <Heading
+            size={heading}
+            fontWeight='extrabold'
+            mb={{ base: 0, md: 4 }}
+            letterSpacing='tight'
+          >
             Hi, I'm Afrie Irham 👋
           </Heading>
-          <Text fontSize='lg' mb='4'>
+          <Text
+            fontSize={{ base: 'md', md: 'lg' }}
+            textAlign={{ base: 'center', md: 'left' }}
+            mb='4'
+          >
             Software developer who loves to create and build stuff.
           </Text>
 
