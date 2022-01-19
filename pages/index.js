@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail, Twitter, Youtube } from 'react-feather'
 
-import Projects from '../components/projects'
+import Projects from '../components/Projects'
 import Articles from '../components/Articles'
 import { fetchArticles } from '../utils/hashnode'
 
