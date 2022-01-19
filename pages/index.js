@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
-import { GitHub, Linkedin, Mail } from 'react-feather'
+import { GitHub, Linkedin, Mail, Twitter, Youtube } from 'react-feather'
+import Projects from '../components/projects'
 
 function LinkIcon({ name, href }) {
   return (
@@ -21,7 +22,7 @@ function LinkText({ children, href }) {
 }
 
 export default function Home() {
-  const heading = useBreakpointValue({ base: 'xl' })
+  const heading = useBreakpointValue({ base: 'lg' })
   const size = useBreakpointValue({ base: 125, md: 200 }) || 125
 
   const meta = {
@@ -63,11 +64,13 @@ export default function Home() {
       </Head>
 
       <Flex
-        minHeight='100vh'
         justifyContent={{ base: 'start', md: 'center' }}
         alignItems={{ base: 'start', md: 'center' }}
         direction={{ base: 'column', md: 'row' }}
         paddingX={{ base: 4, md: 0 }}
+        mt={{ base: 8, md: 16 }}
+        mx='auto'
+        w='2xl'
       >
         <Box
           ml={{ base: 0, md: 4 }}
@@ -78,39 +81,35 @@ export default function Home() {
           <Image src='/portrait.png' height={size} width={size} />
         </Box>
         <Flex maxWidth='550px' direction='column'>
-          <Text color='gray.500' textTransform='uppercase' fontSize={{ base: 'xs', sm: 'sm' }}>
+          <Heading size={heading} fontWeight='extrabold' mb={{ base: 4 }} letterSpacing='tight'>
             Hi, I'm Afrie Irham 👋
-          </Text>
-          <Heading
-            size={heading}
-            fontWeight='extrabold'
-            mb={{ base: 4, sm: 6 }}
-            letterSpacing='tight'
-          >
-            Software developer who loves to create and build stuff.
           </Heading>
-          <Text mb={8} color='gray.600'>
-            I'm based in Malaysia, currently at{' '}
-            <LinkText href='https://snappymob.com'>Snappymob</LinkText> as a software developer and
-            I love React. Built{' '}
-            <LinkText href='https://bukugraduan.afrieirham.com'>BukuGraduan</LinkText> and{' '}
-            <LinkText href='https://bayarsini.link'>BayarSini</LinkText> with Next.js. Ohh –
-            sometimes I <LinkText href='https://blog.afrieirham.com'>write</LinkText> and make{' '}
-            <LinkText href='https://youtube.com/c/madebyafrie'>videos</LinkText> but I do{' '}
-            <LinkText href='https://twitter.com/afrieirham_'>tweet</LinkText> a lot.
+          <Text fontSize='lg' mb='4'>
+            Software developer who loves to create and build stuff.
           </Text>
 
-          <Text mb={2} color='gray.600'>
-            Say hi to me – or{' '}
-            <LinkText href='https://ko-fi.com/afrieirham'>buy me a coffee</LinkText>.
-          </Text>
           <Stack direction='row' spacing='4'>
-            <LinkIcon name={Mail} href='mailto:afrieirham@outlook.com' />
+            <LinkIcon name={Mail} href='mailto:afrieirham.work@gmail.com' />
             <LinkIcon name={Linkedin} href='https://linkedin.com/in/afrieirham' />
             <LinkIcon name={GitHub} href='https://github.com/afrieirham' />
+            <LinkIcon name={Twitter} href='https://twiiter.com/afrieirham_' />
+            <LinkIcon name={Youtube} href='https://www.youtube.com/c/madebyafrie' />
           </Stack>
         </Flex>
       </Flex>
+      <Flex
+        alignItems={{ base: 'start', md: 'center' }}
+        direction={{ base: 'column', md: 'row' }}
+        paddingX={{ base: 4, md: 0 }}
+        mt={{ base: 8, md: 16 }}
+        mx='auto'
+        w='2xl'
+      >
+        <Heading size='md' fontWeight='extrabold' mb={{ base: 4 }} letterSpacing='tight'>
+          Latest articles
+        </Heading>
+      </Flex>
+      <Projects />
     </>
   )
 }
