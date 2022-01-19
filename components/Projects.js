@@ -22,14 +22,7 @@ function ProjectItem({ p }) {
   }
 
   return (
-    <LinkBox
-      w='350px'
-      minH='320px'
-      maxH='320px'
-      borderWidth='1px'
-      rounded='base'
-      _hover={{ bg: 'gray.50' }}
-    >
+    <LinkBox borderWidth='1px' rounded='base' _hover={{ bg: 'gray.50', boxShadow: 'base' }}>
       <Img src={p.cover} w='full' h='200px' objectFit='cover' objectPosition='center top' />
       <Flex direction='column' borderTopWidth='1px' p='4'>
         <Flex>
@@ -44,6 +37,7 @@ function ProjectItem({ p }) {
           mt='2'
           fontSize='sm'
           _hover={{ textDecoration: 'none' }}
+          fontWeight='bold'
         >
           {p.title}
         </Link>
@@ -57,14 +51,7 @@ function ProjectItem({ p }) {
 
 function Projects() {
   return (
-    <Flex
-      direction='column'
-      paddingX={{ base: 4, md: 0 }}
-      mt={{ base: 8, md: 16 }}
-      mx='auto'
-      w='2xl'
-      pb='8'
-    >
+    <Flex direction='column' mt='8' mx='auto' w='3xl' pb='8'>
       <Heading size='md' fontWeight='extrabold' mb={{ base: 4 }} letterSpacing='tight'>
         Projects I've build
       </Heading>
