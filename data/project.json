@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Koleksi Resepi Khairulaming",
+    "description": "Khairulaming’s recepi collection web app with search functionality",
+    "tags": "Personal",
+    "url": "https://resepi-khairulaming.vercel.app/",
+    "cover": "/photos/resepi-khairulaming.png"
+  },
+  {
+    "title": "Covid-19 Memorial Malaysia",
+    "description": "An online memorial website to remember and honour our beloved family and friends who lost their battles against Covid-19 in Malaysia.",
+    "tags": "Volunteer",
+    "url": "https://c19memorial.my/",
+    "cover": "/photos/c19-memorial.png"
+  },
+  {
+    "title": "BayarSini",
+    "description": "A tool for small businesses to collect payments with one link. Pick a username, share your link, get paid!",
+    "tags": "Personal",
+    "url": "https://bayarsini.link",
+    "cover": "/photos/bayarsini.png"
+  },
+  {
+    "title": "Buku Graduan",
+    "description": "A marketplace for students to buy and sell books.",
+    "tags": "Personal",
+    "url": "https://bukugraduan.afrieirham.com",
+    "cover": "/photos/bukugraduan.png"
+  },
+  {
+    "title": "Student Management System for 6th College",
+    "description": "A college student management system that helps college administrator to handle student registration, check-in and check-out process, and digitalizing college-related forms.",
+    "tags": "University",
+    "url": "https://kkis-admin.vercel.app/",
+    "cover": "/photos/kkis.png"
+  },
+  {
+    "title": "Proshop",
+    "description": "An ecommerce platform built by following a course from Udemy to learn React and Redux",
+    "tags": "University",
+    "url": "https://proshop-frontend.vercel.app/",
+    "cover": "/photos/proshop.png"
+  },
+  {
+    "title": "WhatsApp It!",
+    "description": "WhatsApp utility tool where you can message anyone without saving their contact number.",
+    "tags": "Personal",
+    "url": "https://whatsappit.afrieirham.com",
+    "cover": "/photos/whatsappit.png"
+  }
+]
