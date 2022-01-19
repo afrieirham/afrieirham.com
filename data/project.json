@@ -1,7 +1,7 @@
 [
   {
     "title": "Koleksi Resepi Khairulaming",
-    "description": "Khairulaming’s recepi collection web app with search functionality",
+    "description": "Khairulaming’s recipe collection web app with search functionality.",
     "tags": "Personal",
     "url": "https://resepi-khairulaming.vercel.app/",
     "cover": "/photos/resepi-khairulaming.png"
@@ -36,7 +36,7 @@
   },
   {
     "title": "Proshop",
-    "description": "An ecommerce platform built by following a course from Udemy to learn React and Redux",
+    "description": "An ecommerce platform built by following a course from Udemy to learn React and Redux.",
     "tags": "University",
     "url": "https://proshop-frontend.vercel.app/",
     "cover": "/photos/proshop.png"
