@@ -119,5 +119,9 @@ export async function getStaticProps() {
 
   return {
     props: { articles: data.user.publication.posts },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - Every minute
+    revalidate: 60,
   }
 }
