@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
 import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail, Twitter, Youtube } from 'react-feather'
+
 import Projects from '../components/projects'
+import Articles from '../components/Articles'
+import { fetchArticles } from '../utils/hashnode'
 
 function LinkIcon({ name, href }) {
   return (
@@ -21,7 +23,7 @@ function LinkText({ children, href }) {
   )
 }
 
-export default function Home() {
+export default function Home({ articles }) {
   const heading = useBreakpointValue({ base: 'lg' })
   const size = useBreakpointValue({ base: 125, md: 200 }) || 125
 
@@ -97,19 +99,16 @@ export default function Home() {
           </Stack>
         </Flex>
       </Flex>
-      <Flex
-        alignItems={{ base: 'start', md: 'center' }}
-        direction={{ base: 'column', md: 'row' }}
-        paddingX={{ base: 4, md: 0 }}
-        mt={{ base: 8, md: 16 }}
-        mx='auto'
-        w='2xl'
-      >
-        <Heading size='md' fontWeight='extrabold' mb={{ base: 4 }} letterSpacing='tight'>
-          Latest articles
-        </Heading>
-      </Flex>
+      <Articles articles={articles} />
       <Projects />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await fetchArticles()
+
+  return {
+    props: { articles: data.user.publication.posts },
+  }
 }
