@@ -1,16 +1,5 @@
 import React from 'react'
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Img,
-  Link,
-  LinkBox,
-  LinkOverlay,
-  Tag,
-  Text,
-} from '@chakra-ui/react'
+import { Flex, Grid, Heading, Img, Link, LinkBox, LinkOverlay, Tag, Text } from '@chakra-ui/react'
 
 import projects from '../data/project.json'
 
