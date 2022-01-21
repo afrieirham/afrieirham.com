@@ -34,7 +34,7 @@ function LinkText({ children, href }) {
 
 export default function Home({ articles }) {
   const heading = useBreakpointValue({ base: 'lg' })
-  const size = useBreakpointValue({ base: 125, md: 200 }) || 125
+  const size = useBreakpointValue({ base: '125px', md: '200px' })
 
   const meta = {
     title: 'Afrie Irham',
@@ -89,7 +89,7 @@ export default function Home({ articles }) {
           mb={{ base: 2, md: 0 }}
           pt='{{ base: 0, md: 0 }}'
         >
-          <Img src='/portrait.png' height={size} width={size} />
+          <Img src='/portrait.png' htmlHeight={size} htmlWidth={size} />
         </Box>
         <Flex maxWidth='550px' direction='column' alignItems={{ base: 'center', md: 'flex-start' }}>
           <Heading
@@ -117,20 +117,20 @@ export default function Home({ articles }) {
           </Stack>
         </Flex>
       </Flex>
-      <Articles articles={articles} />
+      <Articles articles={[]} />
       <Projects />
     </>
   )
 }
 
-export async function getStaticProps() {
-  const { data } = await fetchArticles()
+// export async function getStaticProps() {
+//   const { data } = await fetchArticles()
 
-  return {
-    props: { articles: data.user.publication.posts },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - Every minute
-    revalidate: 60,
-  }
-}
+//   return {
+//     props: { articles: data.user.publication.posts },
+//     // Next.js will attempt to re-generate the page:
+//     // - When a request comes in
+//     // - Every minute
+//     revalidate: 60,
+//   }
+// }
