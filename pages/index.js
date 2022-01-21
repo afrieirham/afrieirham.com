@@ -1,6 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Flex, Heading, Text, Link, Box, Stack, useBreakpointValue, Icon } from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  Text,
+  Link,
+  Box,
+  Stack,
+  useBreakpointValue,
+  Icon,
+  Img,
+} from '@chakra-ui/react'
 import { GitHub, Linkedin, Mail, Twitter, Youtube } from 'react-feather'
 
 import Projects from '../components/Projects'
@@ -80,7 +89,7 @@ export default function Home({ articles }) {
           mb={{ base: 2, md: 0 }}
           pt='{{ base: 0, md: 0 }}'
         >
-          <Image src='/portrait.png' height={size} width={size} />
+          <Img src='/portrait.png' height={size} width={size} />
         </Box>
         <Flex maxWidth='550px' direction='column' alignItems={{ base: 'center', md: 'flex-start' }}>
           <Heading
