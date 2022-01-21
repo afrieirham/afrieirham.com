@@ -34,7 +34,7 @@ function LinkText({ children, href }) {
 
 export default function Home({ articles }) {
   const heading = useBreakpointValue({ base: 'lg' })
-  const size = useBreakpointValue({ base: '125px', md: '200px' })
+  const size = useBreakpointValue({ base: '125px', md: '200px' }) || '125px'
 
   const meta = {
     title: 'Afrie Irham',
@@ -117,20 +117,20 @@ export default function Home({ articles }) {
           </Stack>
         </Flex>
       </Flex>
-      <Articles articles={[]} />
+      <Articles articles={articles} />
       <Projects />
     </>
   )
 }
 
-// export async function getStaticProps() {
-//   const { data } = await fetchArticles()
+export async function getStaticProps() {
+  const { data } = await fetchArticles()
 
-//   return {
-//     props: { articles: data.user.publication.posts },
-//     // Next.js will attempt to re-generate the page:
-//     // - When a request comes in
-//     // - Every minute
-//     revalidate: 60,
-//   }
-// }
+  return {
+    props: { articles: data.user.publication.posts },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - Every minute
+    revalidate: 60,
+  }
+}
