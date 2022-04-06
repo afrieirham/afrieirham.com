@@ -5,7 +5,6 @@ import { ChevronRight } from 'react-feather'
 function Articles({ articles }) {
   return (
     <Flex
-      direction='column'
       mt='8'
       mx='auto'
       w={{ base: 'full', md: '3xl' }}
