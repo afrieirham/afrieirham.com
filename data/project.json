@@ -1,5 +1,12 @@
 [
   {
+    "title": "Guestbook",
+    "description": "This is a part of the \"Your First Open-Source Contribution\" article on Hashnode.",
+    "tags": "Personal",
+    "url": "https://guestbook.afrieirham.com/",
+    "cover": "/photos/guestbook.png"
+  },
+  {
     "title": "Koleksi Resepi Khairulaming",
     "description": "Khairulaming’s recipe collection web app with search functionality.",
     "tags": "Personal",
