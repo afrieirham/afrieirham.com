@@ -27,7 +27,7 @@ function Articles({ articles }) {
             rounded='base'
             _hover={{ bg: 'gray.50', boxShadow: 'base' }}
           >
-            <Img rounded='base' src={a.coverImage} w='100%' maxH='190px' objectFit='cover' />
+            <Img roundedTop='base' src={a.coverImage} w='100%' maxH='185px' objectFit='cover' />
             <Flex direction='column' p={{ base: 2, md: 3 }}>
               <Link
                 as={LinkOverlay}
