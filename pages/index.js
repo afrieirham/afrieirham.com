@@ -16,17 +16,19 @@ import Projects from '../components/Projects'
 import Articles from '../components/Articles'
 import { fetchArticles } from '../utils/hashnode'
 
+const accentColor = 'purple'
+
 function LinkIcon({ name, href }) {
   return (
     <Link href={href} isExternal>
-      <Icon as={name} color='gray.400' _hover={{ color: 'red.300' }} boxSize='1.5em' focusable />
+      <Icon as={name} color='gray.400' _hover={{ color: `${accentColor}.300` }} boxSize='1.5em' focusable />
     </Link>
   )
 }
 
 function LinkText({ children, href }) {
   return (
-    <Link textDecoration='underline' _hover={{ color: 'red.400' }} href={href} isExternal>
+    <Link textDecoration='underline' _hover={{ color: `${accentColor}.400` }} href={href} isExternal>
       {children}
     </Link>
   )
@@ -112,7 +114,7 @@ export default function Home({ articles }) {
             <LinkIcon name={Mail} href='mailto:afrieirham.work@gmail.com' />
             <LinkIcon name={Linkedin} href='https://linkedin.com/in/afrieirham' />
             <LinkIcon name={GitHub} href='https://github.com/afrieirham' />
-            <LinkIcon name={Twitter} href='https://twiiter.com/afrieirham_' />
+            <LinkIcon name={Twitter} href='https://twitter.com/afrieirham_' />
             <LinkIcon name={Youtube} href='https://www.youtube.com/c/madebyafrie' />
           </Stack>
         </Flex>
