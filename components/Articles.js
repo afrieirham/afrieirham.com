@@ -20,14 +20,14 @@ function Articles({ articles }) {
         gap={{ base: 2, md: 6 }}
         w='full'
       >
-        {articles.slice(0, 2).map((a) => (
+        {articles.slice(0, 4).map((a) => (
           <LinkBox
             key={a.slug}
             borderWidth='1px'
             rounded='base'
             _hover={{ bg: 'gray.50', boxShadow: 'base' }}
           >
-            <Img rounded='base' src={a.coverImage} w='100%' objectFit='cover' />
+            <Img rounded='base' src={a.coverImage} w='100%' maxH='190px' objectFit='cover' />
             <Flex direction='column' p={{ base: 2, md: 3 }}>
               <Link
                 as={LinkOverlay}
@@ -36,6 +36,8 @@ function Articles({ articles }) {
                 fontWeight='bold'
                 fontSize='sm'
                 _hover={{ textDecoration: 'none' }}
+                noOfLines='2'
+                minH='40px'
               >
                 {a.title}
               </Link>
@@ -60,3 +62,4 @@ function Articles({ articles }) {
 }
 
 export default Articles
+
