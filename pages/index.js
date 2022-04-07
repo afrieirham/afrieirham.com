@@ -37,7 +37,7 @@ export default function Home({ articles }) {
   const size = useBreakpointValue({ base: '125px', md: '200px' }) || '125px'
 
   const meta = {
-    title: 'Afrie Irham',
+    title: 'Afrie Irham – Fullstack developer and a youtube addict',
     description: 'Software developer who loves to create and build stuff.',
     image: 'https://afrieirham.com/og.png',
     type: 'website',
