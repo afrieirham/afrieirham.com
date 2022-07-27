@@ -115,7 +115,7 @@ export default function Home({ articles }) {
             <LinkIcon name={Linkedin} href='https://linkedin.com/in/afrieirham' />
             <LinkIcon name={GitHub} href='https://github.com/afrieirham' />
             <LinkIcon name={Twitter} href='https://twitter.com/afrieirham_' />
-            <LinkIcon name={Youtube} href='https://www.youtube.com/c/madebyafrie' />
+            <LinkIcon name={Youtube} href='https://www.youtube.com/c/afrieirham_' />
           </Stack>
         </Flex>
       </Flex>
