@@ -31,7 +31,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="max-w-md mx-auto py-16 font-serif px-6">
+    <div className="max-w-md mx-auto py-8 sm:py-16 font-serif px-6">
       <div>
         <h1 className="text-xl font-bold">afrie irham</h1>
         <ul className="list-disc list-inside">
