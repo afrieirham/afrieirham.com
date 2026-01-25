@@ -14,3 +14,11 @@
 a {
   @apply text-blue-700;
 }
+
+h1 {
+  @apply text-xl font-bold
+}
+
+ul {
+  @apply list-disc list-inside;
+}
