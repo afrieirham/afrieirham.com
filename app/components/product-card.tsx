@@ -7,12 +7,13 @@ export function ProductCard({ name, link }: ProductCardProps) {
   return (
     <a
       href={`https://${link}`}
-      className="border p-4 rounded-xl border-zinc-200 hover:bg-zinc-50"
+      className="border p-4 border-zinc-200 hover:bg-zinc-50 hover:no-underline!"
     >
       <div className="flex gap-2">
         <img
+          alt={`${name} logo`}
           src={`https://${link}/favicon.ico`}
-          className="w-10 h-10 rounded-lg border-zinc-200 border p-1"
+          className="w-10 h-10 p-0.5"
         />
         <div className="font-sans flex flex-col">
           <p className="text-sm text-black">{name}</p>
